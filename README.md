@@ -1,7 +1,10 @@
-# test coverage for  [sinon-chai (v2.9.0)](https://github.com/domenic/sinon-chai#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-sinon-chai.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-sinon-chai) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-sinon-chai.svg)](https://travis-ci.org/npmtest/node-npmtest-sinon-chai)
+# npmtest-sinon-chai
+
+#### test coverage for  [sinon-chai (v2.9.0)](https://github.com/domenic/sinon-chai#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-sinon-chai.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-sinon-chai) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-sinon-chai.svg)](https://travis-ci.org/npmtest/node-npmtest-sinon-chai)
+
 #### Extends Chai with assertions for the Sinon.JS mocking framework.
 
-[![NPM](https://nodei.co/npm/sinon-chai.png?downloads=true)](https://www.npmjs.com/package/sinon-chai)
+[![NPM](https://nodei.co/npm/sinon-chai.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/sinon-chai)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-sinon-chai/tree/alpha)|
 |--:|:--|
@@ -9,11 +12,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-sinon-chai/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-sinon-chai/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-sinon-chai/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-sinon-chai/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-sinon-chai/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-sinon-chai/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-sinon-chai/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-sinon-chai/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-sinon-chai/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-sinon-chai%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-sinon-chai/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-sinon-chai/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-sinon-chai/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-sinon-chai/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-sinon-chai%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-sinon-chai/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-sinon-chai/build/test-report.html](https://npmtest.github.io/node-npmtest-sinon-chai/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-sinon-chai/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-sinon-chai/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-sinon-chai/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-sinon-chai/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-sinon-chai/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-sinon-chai/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-sinon-chai/build/screenCapture.npmPackageListing.svg)
 
@@ -28,7 +37,6 @@
 {
     "author": {
         "name": "Domenic Denicola",
-        "email": "d@domenic.me",
         "url": "https://domenic.me/"
     },
     "bugs": {
@@ -71,8 +79,7 @@
     "main": "./lib/sinon-chai.js",
     "maintainers": [
         {
-            "name": "domenic",
-            "email": "domenic@domenicdenicola.com"
+            "name": "domenic"
         }
     ],
     "name": "sinon-chai",
@@ -81,7 +88,6 @@
         "chai": ">=1.9.2 <4",
         "sinon": "^1.4.0 || ^2.1.0"
     },
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/domenic/sinon-chai.git"
