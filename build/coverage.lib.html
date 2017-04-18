@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-sinon-chai/sinon-chai/lib/sinon-chai.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-sinon-chai/node_modules/sinon-chai/lib/sinon-chai.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-sinon-chai">npmtest-sinon-chai (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-sinon-chai/sinon-chai/lib/sinon-chai.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-sinon-chai/node_modules/sinon-chai/lib/sinon-chai.js</span></h1>
     <h2>
         
         Statements: <span class="metric">27.54% <small>(19 / 69)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric">4 statements, 1 function, 5 branches</span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-sinon-chai/sinon-chai/lib/</a> » sinon-chai.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-sinon-chai/node_modules/sinon-chai/lib/</a> &#187; sinon-chai.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -482,138 +484,137 @@
     // Module systems magic dance.
 &nbsp;
     /* istanbul ignore else */
-    <span class="skip-if-branch" title="else path not taken">E</span>if (typeof require === "function" &amp;&amp; typeof exports === "object" &amp;&amp; typeof module === "object") {
+    <span class="skip-if-branch" title="else path not taken" >E</span>if (typeof require === "function" &amp;&amp; typeof exports === "object" &amp;&amp; typeof module === "object") {
         // NodeJS
         module.exports = sinonChai;
-    } else <span class="cstat-skip" title="statement not covered">if (typeof define === "function" &amp;&amp; define.amd) {</span>
+    } else <span class="cstat-skip" title="statement not covered" >if (typeof define === "function" &amp;&amp; define.amd) {</span>
         // AMD
-<span class="cstat-skip" title="statement not covered">        define(<span class="fstat-skip" title="function not covered">function () {</span></span>
-<span class="cstat-skip" title="statement not covered">            return sinonChai;</span>
+<span class="cstat-skip" title="statement not covered" >        define(<span class="fstat-skip" title="function not covered" >function () {</span></span>
+<span class="cstat-skip" title="statement not covered" >            return sinonChai;</span>
         });
     } else {
         // Other environment (usually &lt;script&gt; tag): plug in to global chai instance directly.
-<span class="cstat-skip" title="statement not covered">        chai.use(sinonChai);</span>
+<span class="cstat-skip" title="statement not covered" >        chai.use(sinonChai);</span>
     }
-}(<span class="fstat-no" title="function not covered">function sinonChai(chai, utils) {</span>
+}(<span class="fstat-no" title="function not covered" >function sinonChai(chai, utils) {</span>
     "use strict";
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var slice = Array.prototype.slice;</span>
+<span class="cstat-no" title="statement not covered" >    var slice = Array.prototype.slice;</span>
 &nbsp;
-<span class="fstat-no" title="function not covered">    function isSpy(putativeSpy) {</span>
-<span class="cstat-no" title="statement not covered">        return typeof putativeSpy === "function" &amp;&amp;</span>
+<span class="fstat-no" title="function not covered" >    function isSpy(putativeSpy) {</span>
+<span class="cstat-no" title="statement not covered" >        return typeof putativeSpy === "function" &amp;&amp;</span>
                typeof putativeSpy.getCall === "function" &amp;&amp;
                typeof putativeSpy.calledWithExactly === "function";
     }
 &nbsp;
-<span class="fstat-no" title="function not covered">    function timesInWords(count) {</span>
-<span class="cstat-no" title="statement not covered">        return count === 1 ? "once" :</span>
+<span class="fstat-no" title="function not covered" >    function timesInWords(count) {</span>
+<span class="cstat-no" title="statement not covered" >        return count === 1 ? "once" :</span>
                count === 2 ? "twice" :
                count === 3 ? "thrice" :
                (count || 0) + " times";
     }
 &nbsp;
-<span class="fstat-no" title="function not covered">    function isCall(putativeCall) {</span>
-<span class="cstat-no" title="statement not covered">        return putativeCall &amp;&amp; isSpy(putativeCall.proxy);</span>
+<span class="fstat-no" title="function not covered" >    function isCall(putativeCall) {</span>
+<span class="cstat-no" title="statement not covered" >        return putativeCall &amp;&amp; isSpy(putativeCall.proxy);</span>
     }
 &nbsp;
-<span class="fstat-no" title="function not covered">    function assertCanWorkWith(assertion) {</span>
-<span class="cstat-no" title="statement not covered">        if (!isSpy(assertion._obj) &amp;&amp; !isCall(assertion._obj)) {</span>
-<span class="cstat-no" title="statement not covered">            throw new TypeError(utils.inspect(assertion._obj) + " is not a spy or a call to a spy!");</span>
+<span class="fstat-no" title="function not covered" >    function assertCanWorkWith(assertion) {</span>
+<span class="cstat-no" title="statement not covered" >        if (!isSpy(assertion._obj) &amp;&amp; !isCall(assertion._obj)) {</span>
+<span class="cstat-no" title="statement not covered" >            throw new TypeError(utils.inspect(assertion._obj) + " is not a spy or a call to a spy!");</span>
         }
     }
 &nbsp;
-<span class="fstat-no" title="function not covered">    function getMessages(spy, action, nonNegatedSuffix, always, args) {</span>
-<span class="cstat-no" title="statement not covered">        var verbPhrase = always ? "always have " : "have ";</span>
-<span class="cstat-no" title="statement not covered">        nonNegatedSuffix = nonNegatedSuffix || "";</span>
-<span class="cstat-no" title="statement not covered">        if (isSpy(spy.proxy)) {</span>
-<span class="cstat-no" title="statement not covered">            spy = spy.proxy;</span>
+<span class="fstat-no" title="function not covered" >    function getMessages(spy, action, nonNegatedSuffix, always, args) {</span>
+<span class="cstat-no" title="statement not covered" >        var verbPhrase = always ? "always have " : "have ";</span>
+<span class="cstat-no" title="statement not covered" >        nonNegatedSuffix = nonNegatedSuffix || "";</span>
+<span class="cstat-no" title="statement not covered" >        if (isSpy(spy.proxy)) {</span>
+<span class="cstat-no" title="statement not covered" >            spy = spy.proxy;</span>
         }
 &nbsp;
-<span class="fstat-no" title="function not covered">        function printfArray(array) {</span>
-<span class="cstat-no" title="statement not covered">            return spy.printf.apply(spy, array);</span>
+<span class="fstat-no" title="function not covered" >        function printfArray(array) {</span>
+<span class="cstat-no" title="statement not covered" >            return spy.printf.apply(spy, array);</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered">        return {</span>
-            affirmative: <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">                return printfArray(["expected %n to " + verbPhrase + action + nonNegatedSuffix].concat(args));</span>
+<span class="cstat-no" title="statement not covered" >        return {</span>
+            affirmative: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                return printfArray(["expected %n to " + verbPhrase + action + nonNegatedSuffix].concat(args));</span>
             },
-            negative: <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">                return printfArray(["expected %n to not " + verbPhrase + action].concat(args));</span>
+            negative: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                return printfArray(["expected %n to not " + verbPhrase + action].concat(args));</span>
             }
         };
     }
 &nbsp;
-<span class="fstat-no" title="function not covered">    function sinonProperty(name, action, nonNegatedSuffix) {</span>
-<span class="cstat-no" title="statement not covered">        utils.addProperty(chai.Assertion.prototype, name, <span class="fstat-no" title="function not covered">function () {</span></span>
-<span class="cstat-no" title="statement not covered">            assertCanWorkWith(this);</span>
+<span class="fstat-no" title="function not covered" >    function sinonProperty(name, action, nonNegatedSuffix) {</span>
+<span class="cstat-no" title="statement not covered" >        utils.addProperty(chai.Assertion.prototype, name, <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            assertCanWorkWith(this);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">            var messages = getMessages(this._obj, action, nonNegatedSuffix, false);</span>
-<span class="cstat-no" title="statement not covered">            this.assert(this._obj[name], messages.affirmative, messages.negative);</span>
+<span class="cstat-no" title="statement not covered" >            var messages = getMessages(this._obj, action, nonNegatedSuffix, false);</span>
+<span class="cstat-no" title="statement not covered" >            this.assert(this._obj[name], messages.affirmative, messages.negative);</span>
         });
     }
 &nbsp;
-<span class="fstat-no" title="function not covered">    function sinonPropertyAsBooleanMethod(name, action, nonNegatedSuffix) {</span>
-<span class="cstat-no" title="statement not covered">        utils.addMethod(chai.Assertion.prototype, name, <span class="fstat-no" title="function not covered">function (arg) {</span></span>
-<span class="cstat-no" title="statement not covered">            assertCanWorkWith(this);</span>
+<span class="fstat-no" title="function not covered" >    function sinonPropertyAsBooleanMethod(name, action, nonNegatedSuffix) {</span>
+<span class="cstat-no" title="statement not covered" >        utils.addMethod(chai.Assertion.prototype, name, <span class="fstat-no" title="function not covered" >function (arg) {</span></span>
+<span class="cstat-no" title="statement not covered" >            assertCanWorkWith(this);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">            var messages = getMessages(this._obj, action, nonNegatedSuffix, false, [timesInWords(arg)]);</span>
-<span class="cstat-no" title="statement not covered">            this.assert(this._obj[name] === arg, messages.affirmative, messages.negative);</span>
+<span class="cstat-no" title="statement not covered" >            var messages = getMessages(this._obj, action, nonNegatedSuffix, false, [timesInWords(arg)]);</span>
+<span class="cstat-no" title="statement not covered" >            this.assert(this._obj[name] === arg, messages.affirmative, messages.negative);</span>
         });
     }
 &nbsp;
-<span class="fstat-no" title="function not covered">    function createSinonMethodHandler(sinonName, action, nonNegatedSuffix) {</span>
-<span class="cstat-no" title="statement not covered">        return <span class="fstat-no" title="function not covered">function () {</span></span>
-<span class="cstat-no" title="statement not covered">            assertCanWorkWith(this);</span>
+<span class="fstat-no" title="function not covered" >    function createSinonMethodHandler(sinonName, action, nonNegatedSuffix) {</span>
+<span class="cstat-no" title="statement not covered" >        return <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            assertCanWorkWith(this);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">            var alwaysSinonMethod = "always" + sinonName[0].toUpperCase() + sinonName.substring(1);</span>
-<span class="cstat-no" title="statement not covered">            var shouldBeAlways = utils.flag(this, "always") &amp;&amp; typeof this._obj[alwaysSinonMethod] === "function";</span>
-<span class="cstat-no" title="statement not covered">            var sinonMethod = shouldBeAlways ? alwaysSinonMethod : sinonName;</span>
+<span class="cstat-no" title="statement not covered" >            var alwaysSinonMethod = "always" + sinonName[0].toUpperCase() + sinonName.substring(1);</span>
+<span class="cstat-no" title="statement not covered" >            var shouldBeAlways = utils.flag(this, "always") &amp;&amp; typeof this._obj[alwaysSinonMethod] === "function";</span>
+<span class="cstat-no" title="statement not covered" >            var sinonMethod = shouldBeAlways ? alwaysSinonMethod : sinonName;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">            var messages = getMessages(this._obj, action, nonNegatedSuffix, shouldBeAlways, slice.call(arguments));</span>
-<span class="cstat-no" title="statement not covered">            this.assert(this._obj[sinonMethod].apply(this._obj, arguments), messages.affirmative, messages.negative);</span>
+<span class="cstat-no" title="statement not covered" >            var messages = getMessages(this._obj, action, nonNegatedSuffix, shouldBeAlways, slice.call(arguments));</span>
+<span class="cstat-no" title="statement not covered" >            this.assert(this._obj[sinonMethod].apply(this._obj, arguments), messages.affirmative, messages.negative);</span>
         };
     }
 &nbsp;
-<span class="fstat-no" title="function not covered">    function sinonMethodAsProperty(name, action, nonNegatedSuffix) {</span>
-<span class="cstat-no" title="statement not covered">        var handler = createSinonMethodHandler(name, action, nonNegatedSuffix);</span>
-<span class="cstat-no" title="statement not covered">        utils.addProperty(chai.Assertion.prototype, name, handler);</span>
+<span class="fstat-no" title="function not covered" >    function sinonMethodAsProperty(name, action, nonNegatedSuffix) {</span>
+<span class="cstat-no" title="statement not covered" >        var handler = createSinonMethodHandler(name, action, nonNegatedSuffix);</span>
+<span class="cstat-no" title="statement not covered" >        utils.addProperty(chai.Assertion.prototype, name, handler);</span>
     }
 &nbsp;
-<span class="fstat-no" title="function not covered">    function exceptionalSinonMethod(chaiName, sinonName, action, nonNegatedSuffix) {</span>
-<span class="cstat-no" title="statement not covered">        var handler = createSinonMethodHandler(sinonName, action, nonNegatedSuffix);</span>
-<span class="cstat-no" title="statement not covered">        utils.addMethod(chai.Assertion.prototype, chaiName, handler);</span>
+<span class="fstat-no" title="function not covered" >    function exceptionalSinonMethod(chaiName, sinonName, action, nonNegatedSuffix) {</span>
+<span class="cstat-no" title="statement not covered" >        var handler = createSinonMethodHandler(sinonName, action, nonNegatedSuffix);</span>
+<span class="cstat-no" title="statement not covered" >        utils.addMethod(chai.Assertion.prototype, chaiName, handler);</span>
     }
 &nbsp;
-<span class="fstat-no" title="function not covered">    function sinonMethod(name, action, nonNegatedSuffix) {</span>
-<span class="cstat-no" title="statement not covered">        exceptionalSinonMethod(name, name, action, nonNegatedSuffix);</span>
+<span class="fstat-no" title="function not covered" >    function sinonMethod(name, action, nonNegatedSuffix) {</span>
+<span class="cstat-no" title="statement not covered" >        exceptionalSinonMethod(name, name, action, nonNegatedSuffix);</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    utils.addProperty(chai.Assertion.prototype, "always", <span class="fstat-no" title="function not covered">function () {</span></span>
-<span class="cstat-no" title="statement not covered">        utils.flag(this, "always", true);</span>
+<span class="cstat-no" title="statement not covered" >    utils.addProperty(chai.Assertion.prototype, "always", <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        utils.flag(this, "always", true);</span>
     });
 &nbsp;
-<span class="cstat-no" title="statement not covered">    sinonProperty("called", "been called", " at least once, but it was never called");</span>
-<span class="cstat-no" title="statement not covered">    sinonPropertyAsBooleanMethod("callCount", "been called exactly %1", ", but it was called %c%C");</span>
-<span class="cstat-no" title="statement not covered">    sinonProperty("calledOnce", "been called exactly once", ", but it was called %c%C");</span>
-<span class="cstat-no" title="statement not covered">    sinonProperty("calledTwice", "been called exactly twice", ", but it was called %c%C");</span>
-<span class="cstat-no" title="statement not covered">    sinonProperty("calledThrice", "been called exactly thrice", ", but it was called %c%C");</span>
-<span class="cstat-no" title="statement not covered">    sinonMethodAsProperty("calledWithNew", "been called with new");</span>
-<span class="cstat-no" title="statement not covered">    sinonMethod("calledBefore", "been called before %1");</span>
-<span class="cstat-no" title="statement not covered">    sinonMethod("calledAfter", "been called after %1");</span>
-<span class="cstat-no" title="statement not covered">    sinonMethod("calledOn", "been called with %1 as this", ", but it was called with %t instead");</span>
-<span class="cstat-no" title="statement not covered">    sinonMethod("calledWith", "been called with arguments %*", "%C");</span>
-<span class="cstat-no" title="statement not covered">    sinonMethod("calledWithExactly", "been called with exact arguments %*", "%C");</span>
-<span class="cstat-no" title="statement not covered">    sinonMethod("calledWithMatch", "been called with arguments matching %*", "%C");</span>
-<span class="cstat-no" title="statement not covered">    sinonMethod("returned", "returned %1");</span>
-<span class="cstat-no" title="statement not covered">    exceptionalSinonMethod("thrown", "threw", "thrown %1");</span>
+<span class="cstat-no" title="statement not covered" >    sinonProperty("called", "been called", " at least once, but it was never called");</span>
+<span class="cstat-no" title="statement not covered" >    sinonPropertyAsBooleanMethod("callCount", "been called exactly %1", ", but it was called %c%C");</span>
+<span class="cstat-no" title="statement not covered" >    sinonProperty("calledOnce", "been called exactly once", ", but it was called %c%C");</span>
+<span class="cstat-no" title="statement not covered" >    sinonProperty("calledTwice", "been called exactly twice", ", but it was called %c%C");</span>
+<span class="cstat-no" title="statement not covered" >    sinonProperty("calledThrice", "been called exactly thrice", ", but it was called %c%C");</span>
+<span class="cstat-no" title="statement not covered" >    sinonMethodAsProperty("calledWithNew", "been called with new");</span>
+<span class="cstat-no" title="statement not covered" >    sinonMethod("calledBefore", "been called before %1");</span>
+<span class="cstat-no" title="statement not covered" >    sinonMethod("calledAfter", "been called after %1");</span>
+<span class="cstat-no" title="statement not covered" >    sinonMethod("calledOn", "been called with %1 as this", ", but it was called with %t instead");</span>
+<span class="cstat-no" title="statement not covered" >    sinonMethod("calledWith", "been called with arguments %*", "%C");</span>
+<span class="cstat-no" title="statement not covered" >    sinonMethod("calledWithExactly", "been called with exact arguments %*", "%C");</span>
+<span class="cstat-no" title="statement not covered" >    sinonMethod("calledWithMatch", "been called with arguments matching %*", "%C");</span>
+<span class="cstat-no" title="statement not covered" >    sinonMethod("returned", "returned %1");</span>
+<span class="cstat-no" title="statement not covered" >    exceptionalSinonMethod("thrown", "threw", "thrown %1");</span>
 }));
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 19:29:29 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 19:12:00 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
