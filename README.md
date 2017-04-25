@@ -1,6 +1,6 @@
 # npmtest-sinon-chai
 
-#### test coverage for  [sinon-chai (v2.9.0)](https://github.com/domenic/sinon-chai#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-sinon-chai.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-sinon-chai) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-sinon-chai.svg)](https://travis-ci.org/npmtest/node-npmtest-sinon-chai)
+#### basic test coverage for  [sinon-chai (v2.9.0)](https://github.com/domenic/sinon-chai#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-sinon-chai.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-sinon-chai) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-sinon-chai.svg)](https://travis-ci.org/npmtest/node-npmtest-sinon-chai)
 
 #### Extends Chai with assertions for the Sinon.JS mocking framework.
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-sinon-chai/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-sinon-chai/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-sinon-chai/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-sinon-chai/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-sinon-chai/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-sinon-chai/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-sinon-chai/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-sinon-chai/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-sinon-chai/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-sinon-chai/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-sinon-chai/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-sinon-chai/build/coverage.html/index.html)
 
@@ -98,7 +98,8 @@
         "test": "mocha",
         "test-travis": "npm install chai@$CHAI_VERSION && npm install sinon@$SINON_VERSION && npm test"
     },
-    "version": "2.9.0"
+    "version": "2.9.0",
+    "bin": {}
 }
 ```
 
